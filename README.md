@@ -131,9 +131,9 @@ Keep track of development and community news.
 * Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
 * Listen to the [Roots Radio podcast](https://roots.io/podcast/)
 
-## Mirosz Development Guide
+# Mirosz Development Guide
 
-# Order job
+## Order job
 1. Create GIT Repo
 2. Create DB
 3. Install Wordpress
@@ -144,7 +144,7 @@ Keep track of development and community news.
 8. Chose theme in wp panel `resources\style.css`
 9. Have FUN ! :blush:
 
-# Rules
+## Rules
 
 1. Keep files names as `example_component.scss => example_component.blade.php => example_component.php => example_component.js`
 2. Use BEM metodology (expect wordpress classes)
@@ -153,5 +153,5 @@ Keep track of development and community news.
 5. Pull alot
 6. If section ready Pull Request
 
-# Hints
+## Hints
 1. How to include, pass variable and ect in Blade https://laravel.com/docs/5.8/blade

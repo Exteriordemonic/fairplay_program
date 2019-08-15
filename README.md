@@ -134,24 +134,24 @@ Keep track of development and community news.
 ## Mirosz Development Guide
 
 # Order job
-* 1. Create GIT Repo
-* 2. Create DB
-* 3. Install Wordpress
-* 4. Install ACF Pro
-* 5. Create sage theme
-* 6. Change assets dir in `resources\assets\config.json`
-* 7. Change theme name dir in `resources\style.css`
-* 8. Chose theme in wp panel `resources\style.css`
-* 9. Have FUN ! :blush:
+1. Create GIT Repo
+2. Create DB
+3. Install Wordpress
+4. Install ACF Pro
+5. Create sage theme
+6. Change assets dir in `resources\assets\config.json`
+7. Change theme name dir in `resources\style.css`
+8. Chose theme in wp panel `resources\style.css`
+9. Have FUN ! :blush:
 
 # Rules
 
-* 1. Keep files names as `example_component.scss => example_component.blade.php => example_component.php => example_component.js`
-* 2. Use BEM metodology (expect wordpress classes)
-* 3. In JS use Objects
-* 4. Create new branch each section / dont push to master !!!
-* 5. Pull alot
-* 6. If section ready Pull Request
+1. Keep files names as `example_component.scss => example_component.blade.php => example_component.php => example_component.js`
+2. Use BEM metodology (expect wordpress classes)
+3. In JS use Objects
+4. Create new branch each section / dont push to master !!!
+5. Pull alot
+6. If section ready Pull Request
 
 # Hints
-* 1. How to include, pass variable and ect in Blade https://laravel.com/docs/5.8/blade
+1. How to include, pass variable and ect in Blade https://laravel.com/docs/5.8/blade

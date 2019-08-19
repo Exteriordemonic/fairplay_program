@@ -17,7 +17,7 @@
   position: relative;
 
   &::before {
-    @extend .absolute;
+    @extend %absolute ;
 
     content: "";
     background-color: rgba(color("primary"), 0.8);

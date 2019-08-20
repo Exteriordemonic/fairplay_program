@@ -1,0 +1,40 @@
+%text {
+  margin: 0;
+  padding: 0;
+}
+
+.headline {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (24, 72));
+
+  font-weight: 900;
+}
+
+.title {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (18, 48));
+
+  font-weight: 600;
+
+  &--upper {
+    text-transform: uppercase;
+  }
+}
+
+.subtitle {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (14, 36));
+
+  font-weight: 600;
+}
+
+.text {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (12, 22));
+
+  font-weight: 400;
+}

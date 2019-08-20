@@ -1,0 +1,21 @@
+.menu-fair-play-menu-container {
+  @include cssLock("margin-top", 360, 1920, ($gutter_num * 5, $gutter_num * 4));
+
+  width: 100%;
+}
+
+.menu {
+  list-style: none;
+  padding-left: 30%;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 30%;
+
+  &__item {
+    padding-bottom: 3%;
+  }
+}

@@ -1,5 +1,5 @@
 @function color($key: "primary") {
-  @return map-get($theme-colors, $key);
+  @return map-get($color, $key);
 }
 
 @function z-index($key) {

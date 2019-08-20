@@ -5,21 +5,21 @@
   $sm = get_field('icons');
 @endphp
 
-<header class="header" header>
+<header class="header" data-header>
+  <img class="header__logo" src="@asset('images/fair-play-logo.png')" alt="Fair Play logo">
   <div class="container">
-    <div class="row">
-      <div class="col header__wrapper">
+      <div class="header__wrapper">
         <a class="header__brand" href="{{ home_url('/') }}">
           
         </a>
-        <button class="header__hamburger hamburger" data-toggle-menu>
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
+        <button class="hamburger -is-active" data-toggle-menu>
+          <span class="hamburger__line hamburger__line--first"></span>
+          <span class="hamburger__line hamburger__line--second"></span>
+          <span class="hamburger__line hamburger__line--third"></span>
         </button>
         <nav class="header__nav" data-nav>
           @if (has_nav_menu('primary_navigation'))
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'header__menu']) !!}
+            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu']) !!}
           @endif
           <ul class="social-media">
             <li class="social-media__item">
@@ -46,6 +46,5 @@
           </ul>
         </nav>
       </div>
-    </div>
   </div>
 </header>

@@ -28,8 +28,15 @@
 @import "common/global";
 
 /** Components */
+@import "./components/container.scss";
+@import "./components/text.scss";
+@import "./components/hamburger.scss";
 
 /** Blocks */
+@import "./blocks/menu.scss";
+
+/** Layouts */
+@import "./layouts/header.scss";
 
 /** Partials */
 

@@ -20,8 +20,23 @@
   }
 
   &__nav {
-    height: 100%;
+    @include cssLock("top", 360, 1920, ($gutter_num * 7, $gutter_num));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
     width: 100%;
+    left: 0;
+    transition: $transition;
     position: absolute;
+    z-index: 1;
+
+    &.-is-active {
+      max-width: 75vh;
+      opacity: 1;
+      pointer-events: initial;
+    }
   }
 }

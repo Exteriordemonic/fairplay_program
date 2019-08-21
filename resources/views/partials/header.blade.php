@@ -17,30 +17,24 @@
           <span class="hamburger__line hamburger__line--second"></span>
           <span class="hamburger__line hamburger__line--third"></span>
         </button>
-        <nav class="header__nav" data-nav>
+        <nav class="header__nav -is-active" data-nav>
           @if (has_nav_menu('primary_navigation'))
             {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu']) !!}
           @endif
           <ul class="social-media">
             <li class="social-media__item">
               <a href="#" class="social-media__link">
-                <span class="social-media__icon">
-                  facebook
-                </span>
+                  <i class="social-media__icon fab fa-facebook-square"></i>
               </a>
             </li>
             <li class="social-media__item">
               <a href="#" class="social-media__link">
-                <span class="social-media__icon">
-                  instagram
-                </span>
+                  <i class="social-media__icon fab fa-instagram"></i>
               </a>
             </li>
             <li class="social-media__item">
               <a href="#" class="social-media__link">
-                <span class="social-media__icon">
-                  mail
-                </span>
+                  <i class="social-media__icon fas fa-envelope"></i>
               </a>
             </li>
           </ul>

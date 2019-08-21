@@ -6,16 +6,35 @@
 
 .menu {
   list-style: none;
-  padding-left: 30%;
+  padding: 0;
+}
+
+.menu-item {
+  text-align: center;
 }
 
 .social-media {
   display: flex;
-  flex-direction: column;
   list-style: none;
-  padding-left: 30%;
+  max-width: $gutter * 25;
+  align-items: center;
+  padding: 0;
 
   &__item {
-    padding-bottom: 3%;
+    align-items: center;
+  }
+
+  &__icon {
+    @extend .icons;
+
+    @include cssLock("padding-left", 360, 1920, ($gutter_num * 1, 1.5));
+    @include cssLock("padding-right", 360, 1920, ($gutter_num * 1, 1.5));
+
+    color: color(primary);
+
+    &:hover {
+      color: color(special);
+      transition: $transition;
+    }
   }
 }

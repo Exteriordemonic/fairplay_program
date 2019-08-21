@@ -38,3 +38,11 @@
 
   font-weight: 400;
 }
+
+.icons {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (21, 25));
+
+  font-weight: 400;
+}

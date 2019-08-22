@@ -31,12 +31,17 @@
 @import "./components/container.scss";
 @import "./components/text.scss";
 @import "./components/hamburger.scss";
+@import "./components/our-mission.scss";
+@import "./components/video.scss";
 
 /** Blocks */
 @import "./blocks/menu.scss";
+@import "./blocks/our-mission-wrapper.scss";
 
 /** Layouts */
 @import "./layouts/header.scss";
+@import "./layouts/hero.scss";
+@import "./layouts/about-us.scss";
 
 /** Partials */
 

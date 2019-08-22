@@ -1,0 +1,8 @@
+.our-mission {
+  display: flex;
+  flex-direction: column;
+
+  @include media(lg) {
+    flex-direction: row;
+  }
+}

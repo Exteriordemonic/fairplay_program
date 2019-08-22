@@ -19,8 +19,12 @@
 }
 
 .menu-item {
+  @extend .icons;
+  @extend .title--upper;
+
   text-align: center;
-  margin-top: $gutter * 1.5;
+  margin-top: $gutter * 1;
+  letter-spacing: $gutter*0.125;
 
   @include media(lg) {
     margin-top: 0;

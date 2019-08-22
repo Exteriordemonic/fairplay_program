@@ -9,14 +9,20 @@
   @include cssLock("font-size", 360, 1920, (24, 72));
 
   font-weight: 900;
+  font-family: font-family(title);
+  letter-spacing: $gutter*0.25;
+  font-style: italic;
 }
 
 .title {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (18, 48));
+  @include cssLock("font-size", 360, 1920, (22, 48));
 
   font-weight: 600;
+  font-family: font-family(title);
+  letter-spacing: $gutter*0.25;
+  font-style: italic;
 
   &--upper {
     text-transform: uppercase;
@@ -29,6 +35,8 @@
   @include cssLock("font-size", 360, 1920, (14, 36));
 
   font-weight: 600;
+  font-family: font-family(title);
+  letter-spacing: $gutter*0.25;
 }
 
 .text {

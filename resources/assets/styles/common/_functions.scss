@@ -5,3 +5,7 @@
 @function z-index($key) {
   @return map-get($z-index, $key);
 }
+
+@function font-family($key) {
+  @return map-get($font-family,$key);
+}

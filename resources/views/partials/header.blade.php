@@ -9,7 +9,7 @@
   <div class="container">
     <div class="header__wrapper">
       <a class="header__brand" href="{{ home_url('/') }}">
-        <img class="header__logo" src="@asset('images/fair-play-logo.png')" alt="Fair Play logo">
+        <img class="header__logo" src="@asset('images/logo-edited.png')" alt="Fair Play logo">
       </a>
       <button class="hamburger" data-toggle-menu>
         <span class="hamburger__line hamburger__line--first"></span>

@@ -1,27 +1,74 @@
 .menu-fair-play-menu-container {
-  @include cssLock("margin-top", 360, 1920, ($gutter_num * 5, $gutter_num * 4));
-
-  width: 100%;
+  @include media(lg) {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    z-index: 12;
+  }
 }
 
 .menu {
   list-style: none;
   padding: 0;
+  padding-top: $gutter * 1;
+
+  @include media(lg) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .menu-item {
   text-align: center;
+  margin-top: $gutter * 1.5;
+
+  @include media(lg) {
+    margin-top: 0;
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 2;
+  }
+
+  a {
+    @extend .text;
+
+    cursor: pointer;
+
+    &:hover {
+      color: color(special);
+      transition: $transition;
+    }
+  }
 }
 
 .social-media {
   display: flex;
   list-style: none;
-  max-width: $gutter * 25;
-  align-items: center;
   padding: 0;
+
+  @include media(lg) {
+    height: 100%;
+    z-index: 12;
+    width: auto;
+  }
+
+  .fab,
+  .fas {
+    color: color(primary);
+
+    &:hover {
+      color: color(special);
+      transition: $transition;
+    }
+  }
 
   &__item {
     align-items: center;
+    cursor: pointer;
+
+    @include media(lg) {
+      padding-left: $gutter * 1;
+      padding-right: $gutter * 1;
+    }
   }
 
   &__icon {
@@ -31,10 +78,5 @@
     @include cssLock("padding-right", 360, 1920, ($gutter_num * 1, 1.5));
 
     color: color(primary);
-
-    &:hover {
-      color: color(special);
-      transition: $transition;
-    }
   }
 }

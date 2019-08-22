@@ -34,9 +34,10 @@
 .text {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (12, 22));
+  @include cssLock("font-size", 360, 1920, (14, 22));
 
   font-weight: 400;
+  font-family: font-family(title);
 }
 
 .icons {

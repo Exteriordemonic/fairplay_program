@@ -12,6 +12,8 @@ import aboutUs from './routes/about';
 
 import Example from './components/example';
 import toggleMenu from './components/hamburger';
+import toggleDescription from './components/description';
+import toggleDescription2 from './components/description2';
 
 
 /** Populate Router instance with DOM routes */
@@ -28,6 +30,8 @@ const routes = new Router({
 jQuery(document).ready(() => {
   routes.loadEvents();
   toggleMenu.init();
+  toggleDescription.init();
+  toggleDescription2.init();
   // Example init of scripts
   // remove it when add 1st component
   Example.init();

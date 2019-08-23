@@ -1,0 +1,34 @@
+.map-article {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @include media(lg) {
+    max-width: $gutter * 90;
+    margin: 0;
+  }
+
+  &__dot {
+    @include cssLock("top", 360, 1920, ($gutter_num * 7, $gutter_num * 17));
+    @include cssLock("left", 360, 1920, ($gutter_num * 1, $gutter_num * 4));
+
+    position: absolute;
+    width: $gutter * 2;
+    height: $gutter * 2;
+    background-color: color(special);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__dot-second {
+    @include cssLock("top", 360, 1920, ($gutter_num * 21, $gutter_num * 45));
+    @include cssLock("left", 360, 1920, ($gutter_num * 20, $gutter_num * 49));
+
+    position: absolute;
+    width: $gutter * 2;
+    height: $gutter * 2;
+    background-color: color(special);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

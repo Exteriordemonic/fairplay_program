@@ -1,0 +1,11 @@
+.map__wrapper {
+  @include cssLock("margin-top", 360, 1920, ($gutter_num * 3, $gutter_num * 4));
+
+  display: flex;
+  flex-direction: column;
+
+  @include media(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

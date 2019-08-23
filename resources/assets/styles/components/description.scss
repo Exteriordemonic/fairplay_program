@@ -1,0 +1,41 @@
+.description {
+  @include media(lg) {
+    width: $gutter * 70;
+    display: none;
+    margin-left: $gutter*2;
+  }
+
+  &__photo {
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 3, $gutter_num * 5)
+    );
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num * 3, $gutter_num * 5)
+    );
+
+    width: $gutter * 18;
+    height: $gutter * 18;
+  }
+
+  &__title {
+    @extend .text;
+
+    color: color(light);
+    letter-spacing: $gutter * 0.1;
+  }
+
+  &__partners {
+    @extend .article;
+  }
+
+  &.-is-active {
+    display: flex;
+    flex-direction: column;
+  }
+}

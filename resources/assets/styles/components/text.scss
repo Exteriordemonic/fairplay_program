@@ -10,7 +10,7 @@
 
   font-weight: 900;
   font-family: font-family(title);
-  letter-spacing: $gutter*0.25;
+  letter-spacing: $gutter * 0.25;
   font-style: italic;
 }
 
@@ -21,7 +21,7 @@
 
   font-weight: 600;
   font-family: font-family(title);
-  letter-spacing: $gutter*0.25;
+  letter-spacing: $gutter * 0.25;
   font-style: italic;
 
   &--upper {
@@ -36,7 +36,7 @@
 
   font-weight: 600;
   font-family: font-family(title);
-  letter-spacing: $gutter*0.25;
+  letter-spacing: $gutter * 0.25;
 }
 
 .text {
@@ -54,4 +54,14 @@
   @include cssLock("font-size", 360, 1920, (21, 25));
 
   font-weight: 400;
+}
+
+.article {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (14, 18));
+
+  font-family: font-family(main);
+  color: color(secondary);
+  font-weight: 300;
 }

@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include cssLock(
+    "max-width",
+    360,
+    1920,
+    ($gutter_num * 40, $gutter_num * 60)
+  );
+
+  @include media(lg) {
+    padding-right: $gutter * 10;
+    margin-top: $gutter*12;
+  }
+
+  &__desc {
+    @extend .text;
+
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 1.5, $gutter_num * 2)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 1.5, $gutter_num * 2)
+    );
+
+    color: color(primary);
+  }
+
+  &__content {
+    @extend .article;
+
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 1.5, $gutter_num * 2)
+    );
+  }
+}

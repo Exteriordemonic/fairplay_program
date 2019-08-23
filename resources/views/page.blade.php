@@ -10,6 +10,8 @@
 
   @include('layouts.components.about-us ')
 
+  @include('layouts.components.map-section ')
+
   @php $sections = get_field('components') @endphp
 
   {{-- @if($sections)

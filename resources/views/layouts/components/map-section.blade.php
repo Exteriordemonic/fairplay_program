@@ -17,7 +17,7 @@
                     <li class="list__item">partner5</li>
                 </ul>
             </div>
-            <div class="description2" data-description2>
+            <div class="description2" data-description>
                     <img src="@asset('images/maciej_miolajczyk-150x150.jpg')" alt="Trener Artur Choma" class="description__photo">
                     <h3 class="description__title">Maciej Mikołajczyk</h3>
                     <p class="description__partners">Partnerzy:</p>
@@ -31,8 +31,8 @@
                 </div>
             <article class="map-article">
                 <img src="@asset('images/map.svg')" alt="Mapa Polski" class="map-article__map">
-                <div class="map-article__dot" data-dot></div>
-                <div class="map-article__dot-second" data-dot-marker></div>
+                <div class="map-article__dot" data-dot-description="0"></div>
+                <div class="map-article__dot-second" data-dot-description="1"></div>
             </article>
         </div>
     </div>

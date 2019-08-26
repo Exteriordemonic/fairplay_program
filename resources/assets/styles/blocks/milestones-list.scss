@@ -1,0 +1,44 @@
+.list {
+  @include cssLock(
+    "max-width",
+    360,
+    1920,
+    ($gutter_num * 40, $gutter_num * 150)
+  );
+
+  margin: 0 auto;
+  padding: 0;
+
+  &__part {
+    width: 100%;
+    position: relative;
+  }
+
+  &__marker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      width: $gutter * 2;
+      height: $gutter * 2;
+      border-radius: 50%;
+      background-color: color(light);
+    }
+
+    &::after {
+      position: absolute;
+      top: $gutter * 2;
+      left: 0;
+      width: $gutter * 0.25;
+      background-color: color(light);
+      height: 100%;
+      content: "";
+    }
+  }
+}

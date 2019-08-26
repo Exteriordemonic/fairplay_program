@@ -12,6 +12,8 @@
 
   @include('layouts.components.map-section ')
 
+  @include('layouts.components.milestones')
+
   @php $sections = get_field('components') @endphp
 
   {{-- @if($sections)

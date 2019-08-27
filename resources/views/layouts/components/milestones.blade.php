@@ -40,8 +40,8 @@
                 </div>
             </li>
             <li class="list__part list__part--special">
-                <div class="list__marker"></div>
-                <div class="list__content">
+                <div class="list__marker--special"></div>
+                <div class="list__content list__content--last">
                     <h3 class="list__subtitle">Nowy Rok</h3>
                 </div>
                 <div class="list__content list__content--special">

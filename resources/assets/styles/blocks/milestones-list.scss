@@ -6,7 +6,11 @@
     ($gutter_num * 40, $gutter_num * 150)
   );
 
-  margin: 0 auto;
+  padding: 0;
+
+  @include media(lg) {
+    margin: 0 auto;
+  }
 
   &__part {
     @include cssLock(
@@ -15,45 +19,89 @@
       1920,
       ($gutter_num * 40, $gutter_num * 94)
     );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 2, $gutter_num * 4)
+    );
 
-    position: relative;
-    display: flex;
-    margin: $gutter*2 auto;
+    @include media(lg) {
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+    }
 
     &--left {
-      justify-content: flex-start;
+      @include media(lg) {
+        justify-content: flex-start;
+      }
     }
 
     &--right {
-      justify-content: flex-end;
+      @include media(lg) {
+        justify-content: flex-end;
+      }
+    }
+
+    &--special {
+      @include media(lg) {
+        justify-content: space-evenly;
+      }
     }
   }
 
   &__marker {
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    &::before {
+    @include media(lg) {
       position: absolute;
       top: 0;
-      left: 0;
-      content: "";
-      display: block;
-      width: $gutter * 2;
-      height: $gutter * 2;
-      border-radius: 50%;
-      background-color: color(light);
+      left: 50%;
+      height: 100%;
+    }
+
+    &::before {
+      @include media(lg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: $gutter * 2;
+        height: $gutter * 2;
+        border-radius: 50%;
+        border: $gutter * 0.125 solid color(borders);
+        background-color: color(light);
+      }
     }
 
     &::after {
-      position: absolute;
-      top: $gutter * 2;
-      left: 0;
-      width: $gutter * 0.25;
-      background-color: color(light);
-      height: 100%;
-      content: "";
+      @include media(lg) {
+        position: absolute;
+        top: $gutter * 2;
+        left: $gutter * 1;
+        bottom: 0;
+        width: $gutter * 0.125;
+        background-color: color(borders);
+        max-height: 100%;
+        content: "";
+      }
+    }
+
+    &--special {
+      &::before {
+        @include media(lg) {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          content: "";
+          display: block;
+          width: $gutter * 2;
+          height: $gutter * 2;
+          border-radius: 50%;
+          border: $gutter * 0.125 solid color(borders);
+          background-color: color(special);
+        }
+      }
     }
   }
 
@@ -62,19 +110,56 @@
       "max-width",
       360,
       1920,
-      ($gutter_num * 40, $gutter_num * 50)
+      ($gutter_num * 40, $gutter_num * 45)
     );
 
     &--right {
-      padding-left: $gutter*9;
+      @include media(lg) {
+        padding-left: $gutter * 7;
+      }
+    }
+
+    &--left {
+      @include media(lg) {
+        text-align: right;
+        padding-right: $gutter * 7;
+      }
+    }
+
+    &--last {
+      @include media(lg) {
+        margin-right: $gutter * 16;
+      }
     }
   }
 
   &__subtitle {
-    margin: 0;
+    @extend .text;
+
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num * 1, $gutter_num * 2)
+    );
+
+    @include media(lg) {
+      font-style: normal;
+      font-family: inherit;
+      font-weight: 800;
+    }
+
+    &--red {
+      color: color(special);
+    }
   }
 
   &__text {
-    padding-right: $gutter*4;
+    @extend .article;
+
+    @include media(lg) {
+      color: color(secondary);
+      word-spacing: $gutter * 0.25;
+    }
   }
 }

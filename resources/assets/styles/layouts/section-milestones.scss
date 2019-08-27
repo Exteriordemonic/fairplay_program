@@ -6,7 +6,7 @@
     ($gutter_num * 3, $gutter_num * 12.5)
   );
 
-  background-color: color(broken-gray);
+  background: linear-gradient(0deg, color(light), color(gradients));
 
   &__header {
     @include cssLock(
@@ -29,6 +29,6 @@
       ($gutter_num * 0.75, $gutter_num * 1.25)
     );
 
-    color: color(light);
+    color: color(primary);
   }
 }

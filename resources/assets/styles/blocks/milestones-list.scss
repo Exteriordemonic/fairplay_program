@@ -7,11 +7,26 @@
   );
 
   margin: 0 auto;
-  padding: 0;
 
   &__part {
-    width: 100%;
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 40, $gutter_num * 94)
+    );
+
     position: relative;
+    display: flex;
+    margin: $gutter*2 auto;
+
+    &--left {
+      justify-content: flex-start;
+    }
+
+    &--right {
+      justify-content: flex-end;
+    }
   }
 
   &__marker {
@@ -40,5 +55,26 @@
       height: 100%;
       content: "";
     }
+  }
+
+  &__content {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 40, $gutter_num * 50)
+    );
+
+    &--right {
+      padding-left: $gutter*9;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__text {
+    padding-right: $gutter*4;
   }
 }

@@ -1,3 +1,5 @@
+@import "../../../node_modules/aos/dist/aos.css";
+
 /** Vendors */
 
 @import "vendors/scss-lock/css-lock";
@@ -43,6 +45,7 @@
 @import "./blocks/article-map.scss";
 @import "./blocks/map-wrapper.scss";
 @import "./blocks/milestones-list.scss";
+@import "./blocks/statistics-list.scss";
 
 /** Layouts */
 @import "./layouts/header.scss";

@@ -1,0 +1,68 @@
+.stats {
+  @include cssLock("grid-gap", 360, 1920, ($gutter_num * 2, $gutter_num * 3));
+
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  padding: 0;
+
+  @include media(lg) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__elem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__icon {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 4, $gutter_num * 8)
+    );
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 5, $gutter_num * 9)
+    );
+
+    margin: 0 auto;
+  }
+
+  &__counter {
+    @extend .subtitle;
+
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 2, $gutter_num * 4)
+    );
+  }
+
+  &__info {
+    @extend .article;
+
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 1.5, $gutter_num * 3)
+    );
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 13, $gutter_num * 23)
+    );
+
+    margin: 0 auto;
+    height: auto;
+  }
+}

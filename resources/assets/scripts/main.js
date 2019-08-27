@@ -1,5 +1,6 @@
 // import external dependencies
 import 'jquery';
+import AOS from 'aos';
 
 // Import everything from autoload
 import './autoload/**/*';
@@ -30,6 +31,7 @@ jQuery(document).ready(() => {
   routes.loadEvents();
   toggleMenu.init();
   toggleDescription.init();
+  AOS.init();
 
   // Example init of scripts
   // remove it when add 1st component

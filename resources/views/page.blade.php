@@ -14,6 +14,8 @@
 
   @include('layouts.components.milestones')
 
+  @include('layouts.components.statistics')
+
   @php $sections = get_field('components') @endphp
 
   {{-- @if($sections)

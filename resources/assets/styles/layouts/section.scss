@@ -12,13 +12,13 @@
       "padding-top",
       360,
       1920,
-      ($gutter_num * 2, $gutter_num * 7)
+      ($gutter_num * 4, $gutter_num * 10)
     );
     @include cssLock(
       "padding-bottom",
       360,
       1920,
-      ($gutter_num * 2, $gutter_num * 7)
+      ($gutter_num * 4, $gutter_num * 10)
     );
 
     margin: 0 auto;

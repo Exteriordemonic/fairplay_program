@@ -11,9 +11,9 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 
-import Example from './components/example';
 import toggleMenu from './components/hamburger';
 import toggleDescription from './components/description';
+import counter from './components/scroll-counter';
 
 
 /** Populate Router instance with DOM routes */
@@ -32,8 +32,6 @@ jQuery(document).ready(() => {
   toggleMenu.init();
   toggleDescription.init();
   AOS.init();
+  counter.init();
 
-  // Example init of scripts
-  // remove it when add 1st component
-  Example.init();
 });

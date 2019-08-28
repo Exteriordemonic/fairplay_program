@@ -1,0 +1,89 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: color(broken-gray);
+
+  @include media(lg) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    margin-top: $gutter*8;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include media(lg) {
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-grow: 2;
+    }
+  }
+
+  &__paragraph {
+    @extend .article;
+  }
+
+  &__content {
+    @extend .article;
+
+    @include cssLock(
+      "padding-left",
+      360,
+      1920,
+      ($gutter_num * 1, $gutter_num * 2)
+    );
+
+    br {
+      display: block;
+
+      @include media(lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 10, $gutter_num * 15)
+    );
+    @include cssLock(
+      "max-height",
+      362,
+      1920,
+      ($gutter_num * 6, $gutter_num * 8)
+    );
+    @include cssLock("padding", 360, 1920, ($gutter_num * 1, $gutter_num * 2));
+  }
+
+  &__copyrights {
+    @extend .article;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+
+  &__contact {
+    @extend .article;
+  }
+
+  &__mail {
+    @extend .article;
+
+    &:hover {
+      color: color(special);
+      transition: $transition;
+    }
+  }
+}

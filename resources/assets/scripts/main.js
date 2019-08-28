@@ -14,6 +14,7 @@ import aboutUs from './routes/about';
 import toggleMenu from './components/hamburger';
 import toggleDescription from './components/description';
 import counter from './components/scroll-counter';
+import flickity from './components/cooperation-slider';
 
 
 /** Populate Router instance with DOM routes */
@@ -33,5 +34,6 @@ jQuery(document).ready(() => {
   toggleDescription.init();
   AOS.init();
   counter.init();
+  flickity.init();
 
 });

@@ -16,6 +16,10 @@
 
   @include('layouts.components.statistics')
 
+  @include('layouts.components.cooperation')
+
+  @include('layouts.components.footer')
+
   @php $sections = get_field('components') @endphp
 
   {{-- @if($sections)

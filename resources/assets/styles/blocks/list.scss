@@ -1,4 +1,6 @@
 .list {
+  @include cssLock("max-width",360,1920,($gutter_num*20,$gutter_num*34));
+
   list-style: none;
 
   &__item {

@@ -3,6 +3,7 @@
   display: flex;
   position: fixed;
   z-index: z-index("header");
+  background-color: color(gradients);
 
   @include media(xl) {
     height: $gutter * 12.5;

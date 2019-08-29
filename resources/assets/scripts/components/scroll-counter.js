@@ -13,12 +13,9 @@ const counter = {
         window.addEventListener('scroll', (e)=> {
             const $this = e.currentTarget;
             const scroll = $this.scrollY;
-            console.log(scroll);
             this.$elem.each(function (){
                 const $top = $(this).offset().top;
-                console.log('top', $(this).attr('data-count'));
                 if($top < (scroll + window.innerHeight) && $(this).attr('data-count') != undefined){
-                    console.log('go on');
                     $(this).prop('Counter',0).animate({
                         Counter: $(this).text(),
                     }, {

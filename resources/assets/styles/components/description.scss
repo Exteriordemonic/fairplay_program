@@ -1,8 +1,12 @@
 .description {
+  width: $gutter * 20;
+
   @include media(lg) {
-    width: $gutter * 70;
-    display: none;
-    margin-left: $gutter*2;
+    position: absolute;
+    width: 0;
+    transition: $transition;
+    opacity: 0;
+    padding: 0;
   }
 
   &__photo {
@@ -19,8 +23,8 @@
       ($gutter_num * 3, $gutter_num * 5)
     );
 
-    width: $gutter * 18;
-    height: $gutter * 18;
+    width: $gutter * 12;
+    height: auto;
   }
 
   &__title {
@@ -32,10 +36,16 @@
 
   &__partners {
     @extend .article;
+
+    padding-top: $gutter * 6;
+    padding-left: $gutter * 2;
   }
 
   &.-is-active {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: $gutter * 42;
+    opacity: 1;
+    background-color: color(primary);
   }
 }

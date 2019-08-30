@@ -15,6 +15,7 @@
   @include media(lg) {
     display: flex;
     align-items: center;
+    padding-top: $gutter * 2;
   }
 }
 
@@ -53,6 +54,7 @@
     height: 100%;
     z-index: 12;
     width: auto;
+    padding-top: $gutter*2;
   }
 
   .fab,

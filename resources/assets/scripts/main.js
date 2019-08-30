@@ -37,3 +37,7 @@ jQuery(document).ready(() => {
   flickity.init();
 
 });
+
+setTimeout(() => {
+  AOS.init();
+}, 1000);

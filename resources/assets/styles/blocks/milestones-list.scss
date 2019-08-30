@@ -81,7 +81,7 @@
         left: $gutter * 1;
         bottom: 0;
         width: $gutter * 0.125;
-        background-color: color(borders);
+        background-color: lighten(color(borders), 10%);
         max-height: 100%;
         content: "";
       }

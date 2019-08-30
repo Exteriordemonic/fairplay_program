@@ -14,7 +14,7 @@
 
 /** Import everything from autoload */
 
-// @import "./autoload/**/*";
+@import "./autoload/**/*";
 
 /**
  * Import npm dependencies
@@ -36,7 +36,6 @@
 @import "./components/wrapper.scss";
 @import "./components/video.scss";
 @import "./components/description.scss";
-@import "./components/description2.scss";
 
 /** Blocks */
 @import "./blocks/menu.scss";

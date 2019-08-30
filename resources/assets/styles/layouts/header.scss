@@ -10,7 +10,7 @@
     align-items: flex-start;
   }
 
-  &__logo {
+  &__brand {
     @include cssLock("top", 360, 1920, ($gutter_num * 2.5, $gutter_num * 4));
     @include cssLock("left", 360, 1920, ($gutter_num * 2.5, $gutter_num * 2.6));
 
@@ -20,6 +20,7 @@
     @include media(xl) {
       position: initial;
       background-color: transparent;
+      margin-top: $gutter*3;
     }
   }
 

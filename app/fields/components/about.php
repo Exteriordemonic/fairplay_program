@@ -4,12 +4,12 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$article = new FieldsBuilder('article');
+$about = new FieldsBuilder('about');
 
-$article
+$about
     ->addText('title', ['title'=>'Tytuł'])
     ->addText('subtitle', ['title'=>'Subtitle'])
-    ->addTextarea('text', ['title'=>'Tekst'])
+    ->addTextarea('text', ['title'=>'Tekst', 'new_lines'=>'br'])
     ->addLink('link', ['title'=>'Link']);
     ;
-return $article;
+return $about;

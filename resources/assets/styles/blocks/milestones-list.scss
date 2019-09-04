@@ -1,4 +1,6 @@
 .milestone {
+  $root: &;
+
   @include cssLock(
     "max-width",
     360,
@@ -30,17 +32,18 @@
       position: relative;
       display: flex;
       margin: 0 auto;
-    }
-
-    &--left {
-      @include media(lg) {
-        justify-content: flex-start;
-      }
+      justify-content: flex-start;
     }
 
     &--right {
       @include media(lg) {
         justify-content: flex-end;
+
+        #{$root}__content {
+          padding-left: $gutter * 7;
+          padding-right: 0;
+          text-align: left;
+        }
       }
     }
 
@@ -103,6 +106,12 @@
         }
       }
     }
+
+    &--last {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__content {
@@ -113,17 +122,9 @@
       ($gutter_num * 40, $gutter_num * 45)
     );
 
-    &--right {
-      @include media(lg) {
-        padding-left: $gutter * 7;
-      }
-    }
-
-    &--left {
-      @include media(lg) {
-        text-align: right;
-        padding-right: $gutter * 7;
-      }
+    @include media(lg) {
+      text-align: right;
+      padding-right: $gutter * 7;
     }
 
     &--last {

@@ -7,7 +7,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $hero = new FieldsBuilder('hero');
 
 $hero
-    ->addText('hero', ['title'=>'Tytuł'])
+    ->addTextarea('hero', ['title'=>'Tytuł','new_lines'=>'br'])
     ->addImage('background_image')
     ;
 return $hero;

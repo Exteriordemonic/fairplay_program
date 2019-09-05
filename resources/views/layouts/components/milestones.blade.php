@@ -37,97 +37,9 @@
                     <h3 class="milestone__subtitle milestone__subtitle--red">{{$item['subtitle2']}}</h3>
                     </div>
                 </li>
-
                 @endif
-
             @endforeach
-            
-            {{-- <li class="milestone__part milestone__part--right aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--right">
-                    <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--left aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--left">
-                    <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--right aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--right">
-                    <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--left aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--left">
-                    <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--special aos-init" data-aos="fade-up">
-                <div class="milestone__marker--special"></div>
-                <div class="milestone__content milestone__content--last">
-                    <h3 class="milestone__subtitle"></h3>
-                </div>
-                <div class="milestone__content milestone__content--special">
-                    <h3 class="milestone__subtitle milestone__subtitle--red"></h3>
-                </div>
-            </li> --}}
         </ul>
         @endif
-        {{-- <ul class="milestone">
-            <li class="milestone__part milestone__part--left aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--left">
-                <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--right aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--right">
-                    <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--left aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--left">
-                    <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--right aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--right">
-                    <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--left aos-init" data-aos="fade-up">
-                <div class="milestone__marker"></div>
-                <div class="milestone__content milestone__content--left">
-                    <h3 class="milestone__subtitle"></h3>
-                    <p class="milestone__text"></p>
-                </div>
-            </li>
-            <li class="milestone__part milestone__part--special aos-init" data-aos="fade-up">
-                <div class="milestone__marker--special"></div>
-                <div class="milestone__content milestone__content--last">
-                    <h3 class="milestone__subtitle"></h3>
-                </div>
-                <div class="milestone__content milestone__content--special">
-                    <h3 class="milestone__subtitle milestone__subtitle--red"></h3>
-                </div>
-            </li>
-        </ul> --}}
     </div>
 </section>
-
-@dump($data)

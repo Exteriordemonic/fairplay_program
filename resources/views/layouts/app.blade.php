@@ -17,6 +17,7 @@
         @endif
       </div>
     </div>
+    @include('layouts.components.footer')
     @php do_action('get_footer') @endphp
     @php wp_footer() @endphp
   </body>

@@ -1,0 +1,65 @@
+.hamburger {
+  $root: &;
+
+  @include cssLock(
+    "border-radius",
+    360,
+    1920,
+    ($gutter_num * 0.7, $gutter_num)
+  );
+  @include cssLock("top", 360, 1920, ($gutter_num * 2.5, $gutter_num * 4));
+  @include cssLock("right", 360, 1920, ($gutter_num * 2.5, $gutter_num * 4));
+  @include cssLock("width", 360, 1920, ($gutter_num * 4.5, $gutter_num * 5));
+  @include cssLock("height", 360, 1920, ($gutter_num * 4.5, $gutter_num * 5));
+
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  border: none;
+
+  @include media(xl) {
+    display: none;
+  }
+
+  &__line {
+    @include cssLock("height", 360, 1920, ($gutter_num * 0.25, $gutter_num));
+
+    width: 90%;
+    position: absolute;
+    background-color: color(secondary);
+    transition: $transition*0.5;
+
+    &--first {
+      top: 10%;
+    }
+
+    &--second {
+      top: 50%;
+    }
+
+    &--third {
+      top: 90%;
+    }
+  }
+
+  &.-is-active {
+    #{$root}__line {
+      &--first {
+        transform: rotate(45deg);
+        top: 50%;
+      }
+
+      &--second {
+        opacity: 0;
+      }
+
+      &--third {
+        transform: rotate(135deg);
+        top: 50%;
+      }
+    }
+  }
+}

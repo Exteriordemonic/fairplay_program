@@ -1,0 +1,161 @@
+.footer {
+  background-color: color(gradients);
+  margin-top: $gutter * 4;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: $gutter*1;
+    }
+  }
+
+  &__content {
+    @include media(lg) {
+      padding: $gutter * 2;
+      margin: $gutter * 2;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__desc {
+    @extend .text;
+
+    font-weight: 300;
+    font-family: font-family(main);
+  }
+
+  &__description {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 29, $gutter_num * 41.5)
+    );
+
+    padding: $gutter * 2 0;
+    margin: $gutter * 2;
+  }
+
+  &__copyrights {
+    text-align: center;
+    padding-bottom: $gutter* 0.5;
+    background-color: color(primary);
+  }
+
+  &__text {
+    @extend .text;
+
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 0.25, $gutter_num * 1.25)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 0.25, $gutter_num * 1.25)
+    );
+
+    font-family: font-family(main);
+    font-size: $gutter*2;
+    color: color(secondary);
+  }
+
+  &__title {
+    @extend .text;
+
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 1.75, $gutter_num * 2.25)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 1.75, $gutter_num * 2.25)
+    );
+  }
+
+  &__link {
+    @extend .text;
+
+    font-family: font-family(main);
+
+    &:hover {
+      color: color(special);
+      transition: $transition;
+    }
+  }
+
+  &__logo {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 25, $gutter_num * 33.5)
+    );
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 7, $gutter_num * 10.5)
+    );
+
+    margin: $gutter * 6 auto;
+
+    @include media(lg) {
+      margin: auto 0;
+    }
+  }
+
+  &__image {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 9, $gutter_num * 10.5)
+    );
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 7.5, $gutter_num * 9)
+    );
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 3, $gutter_num * 5)
+    );
+  }
+
+  &__logotype {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 32, $gutter_num * 44.5)
+    );
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 13, $gutter_num * 16)
+    );
+  }
+}

@@ -1,0 +1,41 @@
+.map {
+  @include cssLock("margin-top", 360, 1920, ($gutter_num * 3, $gutter_num * 4));
+  @include cssLock("padding-bottom", 360, 1920, ($gutter_num * 3, $gutter_num * 4));
+
+  background-color: color(primary);
+
+  &__title {
+    @extend .text;
+
+    color: color(light);
+    font-family: font-family(main);
+  }
+
+  &__content {
+    position: absolute;
+    margin-right: $gutter;
+  }
+
+  &__range {
+    @extend .title;
+
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 2, $gutter_num * 3)
+    );
+
+    color: color(light);
+    text-transform: uppercase;
+    margin-right: 0;
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding-left: 3px;
+
+    &--red {
+      color: color(special);
+    }
+  }
+}

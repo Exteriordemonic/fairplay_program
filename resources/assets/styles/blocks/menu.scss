@@ -1,0 +1,88 @@
+.menu-fair-play-menu-container {
+  @include media(lg) {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    z-index: 12;
+  }
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  padding-top: $gutter * 1;
+
+  @include media(lg) {
+    display: flex;
+    align-items: center;
+    padding-top: $gutter * 2;
+  }
+}
+
+.menu-item {
+  @extend .icons;
+  @extend .title--upper;
+
+  text-align: center;
+  margin-top: $gutter * 1;
+  letter-spacing: $gutter*0.125;
+
+  @include media(lg) {
+    margin-top: 0;
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 2;
+  }
+
+  a {
+    @extend .text;
+
+    cursor: pointer;
+
+    &:hover {
+      color: color(special);
+      transition: $transition;
+    }
+  }
+}
+
+.social-media {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  @include media(lg) {
+    height: 100%;
+    z-index: 12;
+    width: auto;
+    padding-top: $gutter*2;
+  }
+
+  .fab,
+  .fas {
+    color: color(primary);
+
+    &:hover {
+      color: color(special);
+      transition: $transition;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    cursor: pointer;
+
+    @include media(lg) {
+      padding-left: $gutter * 1;
+      padding-right: $gutter * 1;
+    }
+  }
+
+  &__icon {
+    @extend .icons;
+
+    @include cssLock("padding-left", 360, 1920, ($gutter_num * 1, 1.5));
+    @include cssLock("padding-right", 360, 1920, ($gutter_num * 1, 1.5));
+
+    color: color(primary);
+  }
+}

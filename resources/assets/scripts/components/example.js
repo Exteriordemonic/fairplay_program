@@ -19,7 +19,7 @@ const Example = {
         console.log($this);
       });
     });
-  }
+  },
 }
 
 export default Example;

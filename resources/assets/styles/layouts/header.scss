@@ -1,0 +1,71 @@
+.header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: z-index("header");
+  background-color: color(gradients);
+
+  @include media(xl) {
+    height: $gutter * 12.5;
+    align-items: flex-start;
+  }
+
+  &__brand {
+    @include cssLock("top", 360, 1920, ($gutter_num * 2.5, $gutter_num * 4));
+    @include cssLock("left", 360, 1920, ($gutter_num * 2.5, $gutter_num * 2.6));
+
+    width: auto;
+    position: absolute;
+
+    @include media(xl) {
+      position: initial;
+      background-color: transparent;
+      margin-top: $gutter*3;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    @include media(xl) {
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    left: 0;
+    transition: $transition;
+    position: absolute;
+    z-index: 1;
+    margin-top: $gutter * 1.5;
+    top: $gutter * 7;
+    background-color: color(broken-gray);
+
+    &.-is-active {
+      height: 95vh;
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    @include media(lg) {
+      flex-direction: row;
+      opacity: 1;
+      position: initial;
+      margin: 0;
+      height: 100%;
+      align-items: center;
+      pointer-events: initial;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

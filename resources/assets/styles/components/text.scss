@@ -1,0 +1,67 @@
+%text {
+  margin: 0;
+  padding: 0;
+}
+
+.headline {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (24, 72));
+
+  font-weight: 900;
+  font-family: font-family(title);
+  letter-spacing: $gutter * 0.25;
+  font-style: italic;
+}
+
+.title {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (22, 48));
+
+  font-weight: 600;
+  font-family: font-family(title);
+  letter-spacing: $gutter * 0.25;
+  font-style: italic;
+
+  &--upper {
+    text-transform: uppercase;
+  }
+}
+
+.subtitle {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (14, 36));
+
+  font-weight: 600;
+  font-family: font-family(title);
+  letter-spacing: $gutter * 0.25;
+}
+
+.text {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (14, 22));
+
+  font-weight: 400;
+  font-family: font-family(title);
+}
+
+.icons {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (21, 25));
+
+  font-weight: 400;
+}
+
+.article {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (14, 18));
+
+  font-family: font-family(main);
+  color: color(secondary);
+  font-weight: 300;
+}

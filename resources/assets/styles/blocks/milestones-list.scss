@@ -1,0 +1,166 @@
+.milestone {
+  $root: &;
+
+  @include cssLock(
+    "max-width",
+    360,
+    1920,
+    ($gutter_num * 40, $gutter_num * 150)
+  );
+
+  padding: 0;
+
+  @include media(lg) {
+    margin: 0 auto;
+  }
+
+  &__part {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 40, $gutter_num * 94)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 2, $gutter_num * 4)
+    );
+
+    @include media(lg) {
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+      justify-content: flex-start;
+    }
+
+    &--right {
+      @include media(lg) {
+        justify-content: flex-end;
+
+        #{$root}__content {
+          padding-left: $gutter * 7;
+          padding-right: 0;
+          text-align: left;
+        }
+      }
+    }
+
+    &--special {
+      @include media(lg) {
+        justify-content: space-evenly;
+      }
+    }
+  }
+
+  &__marker {
+    @include media(lg) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+    }
+
+    &::before {
+      @include media(lg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: $gutter * 2;
+        height: $gutter * 2;
+        border-radius: 50%;
+        border: $gutter * 0.125 solid color(borders);
+        background-color: color(light);
+      }
+    }
+
+    &::after {
+      @include media(lg) {
+        position: absolute;
+        top: $gutter * 2;
+        left: $gutter * 1;
+        bottom: 0;
+        width: $gutter * 0.125;
+        background-color: lighten(color(borders), 10%);
+        max-height: 100%;
+        content: "";
+      }
+    }
+
+    &--special {
+      &::before {
+        @include media(lg) {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          content: "";
+          display: block;
+          width: $gutter * 2;
+          height: $gutter * 2;
+          border-radius: 50%;
+          border: $gutter * 0.125 solid color(borders);
+          background-color: color(special);
+        }
+      }
+    }
+
+    &--last {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 40, $gutter_num * 45)
+    );
+
+    @include media(lg) {
+      text-align: right;
+      padding-right: $gutter * 7;
+    }
+
+    &--last {
+      @include media(lg) {
+        margin-right: $gutter * 16;
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend .text;
+
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num * 1, $gutter_num * 2)
+    );
+
+    @include media(lg) {
+      font-style: normal;
+      font-family: inherit;
+      font-weight: 800;
+    }
+
+    &--red {
+      color: color(special);
+    }
+  }
+
+  &__text {
+    @extend .article;
+
+    @include media(lg) {
+      color: color(secondary);
+      word-spacing: $gutter * 0.25;
+    }
+  }
+}

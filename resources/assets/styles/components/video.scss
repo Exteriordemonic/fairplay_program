@@ -1,0 +1,15 @@
+.video {
+  @include cssLock(
+    "height",
+    360,
+    1920,
+    ($gutter_num * 30, $gutter_num * 70)
+  );
+
+  width: 100%;
+
+  @include media(lg) {
+    max-width: $gutter*147.5;
+    margin: 0 auto $gutter*8 auto;
+  }
+}

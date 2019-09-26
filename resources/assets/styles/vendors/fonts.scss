@@ -1,3 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&subset=latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Martel:300,800&display=swap&subset=latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Biryani:300,800&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900&subset=latin-ext");
+
+@font-face {
+  font-family: "FuturaXBlkCnEU";
+  src:
+    url("../fonts/FuturaXBlkCnEU-Normal.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FuturaXBlkCnEU-Normal.woff") format("woff"),
+    url("../fonts/FuturaXBlkCnEU-Normal.ttf") format("truetype"),
+    url("../fonts/FuturaXBlkCnEU-Normal.svg#FuturaXBlkCnEU-Normal") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "FuturaXBlkCnEU";
+  src:
+    url("../fonts/FuturaXBlkCnEU-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FuturaXBlkCnEU-Italic.woff") format("woff"),
+    url("../fonts/FuturaXBlkCnEU-Italic.ttf") format("truetype"),
+    url("../fonts/FuturaXBlkCnEU-Italic.svg#FuturaXBlkCnEU-Normal") format("svg");
+  font-style: italic;
+  font-weight: normal;
+}

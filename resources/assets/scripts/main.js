@@ -1,5 +1,6 @@
 // import external dependencies
 import 'jquery';
+import AOS from 'aos';
 
 // Import everything from autoload
 import './autoload/**/*';
@@ -10,7 +11,10 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 
-import Example from './components/example';
+import toggleMenu from './components/hamburger';
+import toggleDescription from './components/description';
+import counter from './components/scroll-counter';
+import flickity from './components/cooperation-slider';
 
 
 /** Populate Router instance with DOM routes */
@@ -26,8 +30,14 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   routes.loadEvents();
+  toggleMenu.init();
+  toggleDescription.init();
+  AOS.init();
+  counter.init();
+  flickity.init();
 
-  // Example init of scripts
-  // remove it when add 1st component
-  Example.init();
 });
+
+setTimeout(() => {
+  AOS.init();
+}, 1000);

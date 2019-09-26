@@ -1,0 +1,11 @@
+.list {
+  @include cssLock("max-width",360,1920,($gutter_num*20,$gutter_num*34));
+
+  list-style: none;
+  padding-left: $gutter*2;
+
+  &__item {
+    padding: $gutter * 1.5;
+    color: color(light);
+  }
+}

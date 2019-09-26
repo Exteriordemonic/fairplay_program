@@ -1,16 +1,16 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
-$theme-colors: (
+$color: (
   light: #fff,
-  dark: #000,
-  primary: #364ea2,
-  secondary: #dcc38b,
-  grey: #707070,
-  special: #fec400,
-  free: #20ff49,
-  taken: #ffdd1b,
-  sold: #fa0909
+  primary: #191f2b,
+  secondary: #9b9b9b,
+  light-gray: #b3b2b5,
+  broken-gray: #e8e8e8,
+  special: #f10000,
+  gradients: #f4f4f4,
+  borders: #cfcfcf,
+  random: #dfdfdf,
 );
 
 $media: (
@@ -24,8 +24,8 @@ $media: (
 $transition: 0.4s;
 
 $font-family: (
-  main: "Biryani",
-  title: "Martel"
+  main: "Lato",
+  title: "FuturaXBlkCnEU",
 );
 
 $gutter: 8px;

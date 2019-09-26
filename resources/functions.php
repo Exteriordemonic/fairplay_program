@@ -109,3 +109,11 @@ if( function_exists('acf_add_options_page') ) {
 function image($id, $size, $class) {
     return wp_get_attachment_image($id, $size, false, ['class'=>$class]);
 }
+
+// ADD SVG FUNCTION
+
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg';
+    return $mimes;
+  }
+  add_filter('upload_mimes', 'cc_mime_types');
